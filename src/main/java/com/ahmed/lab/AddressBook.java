@@ -9,7 +9,7 @@ import java.util.List;
 public class AddressBook {
 
     @Id
-    @GeneratedValue(generator = "address", strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "addressBook", strategy = GenerationType.IDENTITY)
     long id;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -23,6 +23,8 @@ public class AddressBook {
     public void addBuddy(BuddyInfo buddy) {
         if (buddy != null) {
             buddies.add(buddy);
+        } else {
+            System.out.println("\n\n =====================BUDDY IS NULL\n\n ========================");
         }
     }
 

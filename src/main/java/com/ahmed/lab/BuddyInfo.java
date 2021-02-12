@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class BuddyInfo {
 
     @Id
-    @GeneratedValue(generator = "buddy", strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "buddyInfo", strategy = GenerationType.IDENTITY)
     long id;
 
     @Column

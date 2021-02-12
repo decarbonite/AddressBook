@@ -16,9 +16,6 @@ public class AddressBookDao {
     @Autowired
     BuddyInfoRepository buddyInfoRepository;
 
-    public List<AddressBook> getAllAddressBooks() {
-        return addressBookRepository.findAll();
-    }
 
     public AddressBook getAddressBookById(long id) {
         return addressBookRepository.findById(id);
