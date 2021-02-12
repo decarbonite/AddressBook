@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+
+<section th:each="addressBook: ${addressBook}">
+    <h2>Book id: <th:block th:utext="${addressBook.getId()}"/></h2>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>Buddy Id</td>
+            <td>Buddy Name</td>
+            <td>Buddy Phone Number</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="buddyInfo: ${addressBook.getBuddies()}">
+            <td th:text="${buddyInfo.getId()}" />
+            <td th:text="${buddyInfo.getName()}" />
+            <td th:text="${buddyInfo.getPhoneNumber()}" />
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>
