@@ -6,26 +6,14 @@
 </head>
 <body>
 
+<h1>Form</h1>
 
-<section th:each="addressBook: ${addressBook}">
-    <h2>Book id: <th:block th:utext="${addressBook.getId()}"/></h2>
-    <table border="1">
-        <thead>
-        <tr>
-            <td>Buddy Id</td>
-            <td>Buddy Name</td>
-            <td>Buddy Phone Number</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="buddyInfo: ${addressBook.getBuddies()}">
-            <td th:text="${buddyInfo.getId()}" />
-            <td th:text="${buddyInfo.getName()}" />
-            <td th:text="${buddyInfo.getPhoneNumber()}" />
-        </tr>
-        </tbody>
-    </table>
-</section>
+<form action="#" th:action="@{/submit-data}" th:object="${buddyInfo}" method="post">
+    <p>AddressBook to add buddy to: <input type="text" value="" th:field="*{addressBookId}" /></p>
+    <p>Buddy Name: <input type="text" name="name" th:field="*{name}" /></p>
+    <p>Buddy Number: <input type="text" name="number" th:field="*{phoneNumber}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
 
 </body>
 </html>

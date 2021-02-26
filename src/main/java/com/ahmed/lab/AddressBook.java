@@ -16,6 +16,7 @@ public class AddressBook {
     @JoinColumn
     private List<BuddyInfo> buddies;
 
+
     public AddressBook() {
         buddies = new ArrayList<>();
     }

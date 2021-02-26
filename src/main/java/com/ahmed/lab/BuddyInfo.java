@@ -12,6 +12,8 @@ public class BuddyInfo {
     @Column
     String name;
 
+    int addressBookId;
+
     @Column
     String phoneNumber;
 
@@ -24,6 +26,14 @@ public class BuddyInfo {
         this.phoneNumber = phoneNumber;
     }
 
+
+    public int getAddressBookId() {
+        return addressBookId;
+    }
+
+    public void setAddressBookId(int addressBookId) {
+        this.addressBookId = addressBookId;
+    }
 
     public String getName() {
         return name;
