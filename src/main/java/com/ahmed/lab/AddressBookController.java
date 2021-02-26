@@ -28,7 +28,7 @@ public class AddressBookController {
     public String viewAllBooks(@ModelAttribute BuddyInfo buddyInfo, Model model) {
         addBuddyToBook(buddyInfo.getAddressBookId(), buddyInfo);
         model.addAttribute("addressBook", addressBookRepository.findAll());
-        return "newpage";
+        return "addressbook";
     }
 
     @GetMapping(path = "/ajax-too-good", produces = "application/json")

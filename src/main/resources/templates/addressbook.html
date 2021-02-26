@@ -3,6 +3,8 @@
 <head>
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/client.js"></script>
 </head>
 <body>
 
@@ -14,6 +16,22 @@
     <p>Buddy Number: <input type="text" name="number" th:field="*{phoneNumber}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
+
+<section>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>Book Id</td>
+            <td>Buddy Id</td>
+            <td>Buddy Name</td>
+            <td>Buddy Phone Number</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</section>
 
 </body>
 </html>
